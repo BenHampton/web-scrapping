@@ -19,12 +19,12 @@ public class WebScrappingController {
         this.webScrappingService = webScrappingService;
     }
 
-    @GetMapping("/open-graphs")
+    @GetMapping("/open-graph-matadata-properties")
     public ResponseEntity<Map<String, String>> webScrappingOpenGraph(@RequestParam(value = "url") String url) throws IOException {
         return new ResponseEntity<>(webScrappingService.retrieveOpenGraphPropertyMetadata(url), HttpStatus.OK);
     }
 
-    @GetMapping("twitters")
+    @GetMapping("twitter-matadata-properties")
     public ResponseEntity<Map<String, String>> webScrappingTwitter(@RequestParam(value = "url") String url) throws IOException {
         return new ResponseEntity<>(webScrappingService.retrieveTwitterPropertyMetadata(url), HttpStatus.OK);
     }
