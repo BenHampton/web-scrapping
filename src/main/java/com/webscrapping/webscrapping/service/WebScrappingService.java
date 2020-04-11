@@ -41,7 +41,7 @@ public class WebScrappingService {
         return document.getElementsByTag(META);
     }
 
-    public Map<String, String> retrieveOpenGraphMetadata(String url) throws IOException{
+    public Map<String, String> retrieveOpenGraphPropertyMetadata(String url) throws IOException{
 
         Elements metaTags = retrieveMetadata(url);
         Map<String, String> openGraphMetadataMap = new HashMap<>();
@@ -60,7 +60,7 @@ public class WebScrappingService {
         return openGraphMetadataMap;
     }
 
-    public Map<String, String> retrieveTwittersMetadata(String url) throws IOException{
+    public Map<String, String> retrieveTwitterPropertyMetadata(String url) throws IOException{
 
         Elements metaTags = retrieveMetadata(url);
         Map<String, String> twitterMetadataMap = new HashMap<>();

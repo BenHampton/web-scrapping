@@ -21,11 +21,11 @@ public class WebScrappingController {
 
     @GetMapping("/open-graphs")
     public ResponseEntity<Map<String, String>> webScrappingOpenGraph(@RequestParam(value = "url") String url) throws IOException {
-        return new ResponseEntity<>(webScrappingService.retrieveOpenGraphMetadata(url), HttpStatus.OK);
+        return new ResponseEntity<>(webScrappingService.retrieveOpenGraphPropertyMetadata(url), HttpStatus.OK);
     }
 
     @GetMapping("twitters")
     public ResponseEntity<Map<String, String>> webScrappingTwitter(@RequestParam(value = "url") String url) throws IOException {
-        return new ResponseEntity<>(webScrappingService.retrieveTwittersMetadata(url), HttpStatus.OK);
+        return new ResponseEntity<>(webScrappingService.retrieveTwitterPropertyMetadata(url), HttpStatus.OK);
     }
 }
